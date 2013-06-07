@@ -1,0 +1,10 @@
+= simple_form_for(@frog) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :color
+    = f.input :qty
+
+  .form-actions
+    = f.button :submit

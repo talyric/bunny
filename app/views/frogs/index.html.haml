@@ -1,0 +1,23 @@
+%h1 Listing frogs
+
+%table
+  %tr
+    %th Name
+    %th Color
+    %th Qty
+    %th
+    %th
+    %th
+
+  - @frogs.each do |frog|
+    %tr
+      %td= frog.name
+      %td= frog.color
+      %td= frog.qty
+      %td= link_to 'Show', frog
+      %td= link_to 'Edit', edit_frog_path(frog)
+      %td= link_to 'Destroy', frog, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Frog', new_frog_path

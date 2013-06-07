@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @frog.name
+%p
+  %b Color:
+  = @frog.color
+%p
+  %b Qty:
+  = @frog.qty
+
+= link_to 'Edit', edit_frog_path(@frog)
+\|
+= link_to 'Back', frogs_path
